@@ -1,0 +1,56 @@
+body {
+    box-sizing: border-box;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
+    height: 550px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: green;
+    color: white;
+    padding: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.header button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    flex-grow: 1;
+    background-color: #222;
+    padding: 15px;
+}
+
+.board__tile {
+    background-color: #ffffff;
+    cursor: pointer;
+    font-size: 80px;
+    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.board__tile:hover {
+    background-color: #eeeeee;
+}
+
+.winning-tile, .winning-tile:hover {
+    background-color: green;
+}
